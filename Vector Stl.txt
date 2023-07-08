@@ -1,0 +1,61 @@
+#include <QCoreApplication>
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    //declaring vector
+    vector<string> v1;
+
+    //inserting element in the container
+    v1.push_back(("satish"));
+    v1.push_back("shree");
+    v1.push_back("pune");
+    v1.push_back("gops");
+
+    //remove an last element
+    v1.pop_back();
+
+    //give first elemtn
+    cout<<"first element"<<v1.front();
+
+    //give last element
+    cout<<"last element"<<v1.back()<<endl;
+
+    //erase first element
+      v1.erase(v1.begin());
+
+      //accesss elemtn is sqare bracket
+      cout<<"first element"<<v1[1]<<endl;
+      cout<<"second element"<<v1[2]<<endl;
+      cout<<"third element"<<v1[3]<<endl;
+
+
+    //for loop using iterator
+    for(vector<string>::iterator itr=v1.begin();itr!=v1.end();++itr)
+    {
+        cout<<*itr<<endl;
+    }
+
+    //for loops using reverse iterator
+    for(vector<string>::reverse_iterator itr=v1.rbegin();itr!=v1.rend();++itr)
+    {
+        cout<<"reverse element by using iterator"<<" "<<*itr<<endl;
+    }
+    cout<<"size of an vector is"<<v1.size()<<endl;
+    cout<<"max size of vector is"<<v1.max_size()<<endl;
+   cout<<"the capacity of vector is"<< v1.capacity()<<endl;
+   cout<<"check vector is empty or not"<<v1.empty()<<endl;
+
+   //if else condition
+   if(v1.empty()!=0)
+   {
+       cout<<"vector is empty";
+   }
+   else{
+       cout<<"vector is not empty";
+   }
+   //clear the vector
+   v1.clear();
+return 0;
+};

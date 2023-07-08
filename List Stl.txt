@@ -1,0 +1,35 @@
+#include <QCoreApplication>
+#include<iostream>
+#include<list>
+using namespace std;
+int main()
+{
+    list<string> li={"satish","sapkal"};
+    list<string>::iterator itr;            //iterator it will iterator and manupulate elements from thr list container
+     li.push_front("Hello Guys");          //and elements at the frony of container list
+    li.push_back("Weocome to india");       // add element at end of list
+    li.push_back("good");
+    li.pop_back();                          //remove last element from the list container
+    li.pop_front();                         //remove first element frony thr list container
+    cout<<li.empty()<<endl;                 //false=return 0 and true return 1
+    cout<<li.size()<<endl;                   //give size of container
+    cout<<li.max_size()<<endl;
+    cout<<li.front()<<endl;                        // return forst elements of the list
+    cout<<li.back()<<endl;                               // return last elements of thr list
+
+    for(itr=li.begin();itr!=li.end();++itr)
+    {
+        cout<<*itr<<endl;
+   li.sort();
+   li.reverse();
+
+    }
+//reverse through itertor
+    for(list<string>::reverse_iterator itr=li.rbegin();itr!=li.rend();++itr)
+    {
+        cout<<*itr<<endl;
+    }
+
+    return 0;
+};
+

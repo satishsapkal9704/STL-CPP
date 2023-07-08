@@ -1,0 +1,51 @@
+MAP:
+1.-> 	Maps are the associative containers that store sorted key-value pair
+2.->	key is unique and it can be inserted or deleted but cannot be altered. 
+3.->	Values associated with keys can be changed.
+
+MAP-Program
+
+#include <QCoreApplication>
+#include<iostream>
+using namespace std;
+#include<map>
+int main()
+{
+    // delacint as map by using key value pair
+    map<int,string> students;
+   // 1) Assignment using array index notation
+    students[1]="satish";
+     students[2]="sapkal";
+      students[3]="shree";
+       students[4]="gops";
+       //printing element using index
+cout<<"first elemet"<<students[1]<<endl;
+
+//printing size of map
+cout<<"size of map"<<students.size()<<endl;
+
+//printing maxsize of map
+cout<<"max size is"<<students.max_size()<<endl;
+
+//check map is empty or not
+cout<<"map i empty or not"<<students.empty()<<endl;
+
+//inserting value
+students.insert(make_pair(5,"hello"));
+
+//reversing map elements
+students.rbegin();
+
+//earasing element
+students.erase(1);
+for(map<int,string>::iterator itr=students.begin();itr!=students.end();++itr)
+{
+    cout<<itr->first<<itr->second<<endl;
+}
+//reverse iterator
+for(map<int,string>::reverse_iterator itr=students.rbegin();itr!=students.rend();++itr)
+{
+    cout<<itr->first<<itr->second<<endl;
+}
+return 0;
+};
